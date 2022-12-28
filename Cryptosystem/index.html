@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MGS Cryptography Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assets/js/aes.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/random.js"></script>
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <a class="back"></a>
+
+    <div id="stage">
+      <div id="step1">
+        <div class="content">
+          <div class="open_title">
+            <span class="font_override"
+              ><h1 id="title_override">What do you want to do?</h1></span
+            >
+          </div>
+          <a class="button encrypt green">Encrypt a file</a>
+          <a class="button decrypt magenta">Decrypt a file</a>
+        </div>
+      </div>
+
+      <div id="step2">
+        <div class="content if-encrypt">
+          <h1>Pick a file to encrypt</h1>
+          <h2>
+            An encrypted copy of the file will be generated and sent back to
+            you.
+          </h2>
+          <a class="button browse blue">Browse</a>
+
+          <input type="file" id="encrypt-input" />
+        </div>
+
+        <div class="content if-decrypt">
+          <h1>Pick a file to decrypt</h1>
+          <h2>Only files encrypted by this application are acceptable.</h2>
+          <a class="button browse blue">Browse</a>
+
+          <input type="file" id="decrypt-input" />
+        </div>
+      </div>
+
+      <div id="step3">
+        <div class="content if-encrypt">
+          <h1>Enter a password</h1>
+          <h2>The password will be used as an encryption key.</h2>
+
+          <input type="password" />
+          <a class="button process red">Encrypt</a>
+        </div>
+
+        <div class="content if-decrypt">
+          <h1>Enter the password</h1>
+          <h2>Enter the password that was used to encrypt this file.</h2>
+
+          <input type="password" />
+          <a class="button process red">Decrypt</a>
+        </div>
+      </div>
+
+      <div id="step4">
+        <div class="content">
+          <div class="mini_wrapper">
+            <div class="endtext_override">
+              <h1 id="font_swap_final">Your file is ready!</h1>
+            </div>
+            <div class="line_loop"></div>
+            <a class="button download pink">Download</a>
+          </div>
+        </div>
+        <div class="signature">
+          <p id="signature_text"><span id="c_sign">&copy;</span>MGS 2022</p>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>
